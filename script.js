@@ -21,7 +21,7 @@ function mostrarConfirmacion() {
   }
 }
 
-mostrarConfirmacion();
+//mostrarConfirmacion();
 
 general.addEventListener("scroll", function () {
   // Obtiene la posición actual del scroll
