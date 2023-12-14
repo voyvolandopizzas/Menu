@@ -8,6 +8,8 @@ var indexShow = document.querySelector('.menu-general');
 var divOffsetTop = menu.offsetTop;
 var divOculto = document.getElementById("divOculto");
 
+
+console.log("Version 1.1");
   
 
   general.addEventListener("scroll", function () {
