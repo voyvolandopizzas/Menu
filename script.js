@@ -8,7 +8,7 @@ var indexShow = document.querySelector(".menu-general");
 var divOffsetTop = menu.offsetTop;
 var divOculto = document.getElementById("divOculto");
 
-console.log("Version 1.2");
+console.log("Version 2.0");
 function mostrarConfirmacion() {
   var respuesta = confirm("Pagina en mantenimiento");
 
