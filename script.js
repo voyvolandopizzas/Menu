@@ -3,7 +3,7 @@ var mask = document.querySelector(".div-mask");
 var showMenu = document.getElementById("showMenu");
 var hideMenu = document.getElementById("hideMenu");
 var indexShow = document.querySelector(".menu-general");
-
+var html = document.getElementsByTagName("html")[0];
 var divOffsetTop = menu.offsetTop;
 var divOculto = document.getElementById("divOculto");
 
@@ -31,10 +31,9 @@ let lastScrollTop = 0;
 
 document.addEventListener("scroll", function () {
   // Obtiene la posición actual del scroll
-  var scrollPosition = document.scrollY || document.scrollTop;
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   // Define la posición a partir de la cual el div debe aparecer
   var posicionAparicion = 1200; // Puedes ajustar este valor según tus necesidades
-
 
   // Verifica si la posición del scroll supera la posición de aparición
   if (scrollPosition > posicionAparicion) {
@@ -322,6 +321,7 @@ function viewIngredients(name) {
       menu.style.display = "none";
       divOculto.style.display = "none";
       typePizza.innerHTML = pizza.nombre;
+      html.style.overflowY = 'hidden';
       break;
     }
   }
@@ -332,4 +332,5 @@ function closeModalIngredients() {
   divIngredientes.innerHTML = "";
   divOculto.style.display = "flex";
   modalIngrediets.classList.remove("show-modal-ingredients");
+  html.style.overflowY = 'auto';
 }
