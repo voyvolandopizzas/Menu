@@ -53,7 +53,10 @@ function navigated(location){
         showMenu.style.display = 'block';
         hideMenu.style.display = 'none';
         indexShow.classList.remove('show-menu-general');
-        window.location.href = location;
+        var targetElement = document.querySelector(location);
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 
