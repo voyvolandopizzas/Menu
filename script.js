@@ -9,6 +9,19 @@ var divOffsetTop = menu.offsetTop;
 var divOculto = document.getElementById("divOculto");
 
 console.log("Version 1.2");
+function mostrarConfirmacion() {
+  var respuesta = confirm("Pagina en mantenimiento");
+
+  if (respuesta) {
+      // El usuario hizo clic en "Aceptar"
+      mostrarConfirmacion(); // Llamar a la función nuevamente
+  } else {
+      // El usuario hizo clic en "Cancelar" o cerró el cuadro de diálogo
+      mostrarConfirmacion(); // Llamar a la función nuevamente
+  }
+}
+
+mostrarConfirmacion();
 
 general.addEventListener("scroll", function () {
   // Obtiene la posición actual del scroll
