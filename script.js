@@ -21,6 +21,13 @@ function mostrarConfirmacion() {
   }
 }
 
+function handleNavigation(event) {
+  if (event.target.tagName === 'LI') {
+    var targetId = event.target.getAttribute('data-target');
+    navigated(targetId);
+  }
+}
+
 //mostrarConfirmacion();
 
 general.addEventListener("scroll", function () {
