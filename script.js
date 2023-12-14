@@ -1,5 +1,4 @@
 var menu = document.querySelector(".div-menu");
-var general = document.querySelector(".general");
 var mask = document.querySelector(".div-mask");
 var showMenu = document.getElementById("showMenu");
 var hideMenu = document.getElementById("hideMenu");
@@ -27,14 +26,15 @@ function handleNavigation(event) {
     navigated(targetId);
   }
 }
-
+let lastScrollTop = 0;
 //mostrarConfirmacion();
 
-general.addEventListener("scroll", function () {
+document.addEventListener("scroll", function () {
   // Obtiene la posición actual del scroll
-  var scrollPosition = general.scrollY || general.scrollTop;
+  var scrollPosition = document.scrollY || document.scrollTop;
   // Define la posición a partir de la cual el div debe aparecer
   var posicionAparicion = 1200; // Puedes ajustar este valor según tus necesidades
+
 
   // Verifica si la posición del scroll supera la posición de aparición
   if (scrollPosition > posicionAparicion) {
