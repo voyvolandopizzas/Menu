@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voy Volando | PIZZAS</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./resources/icon.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="general">
+      <div class="div-central">
+        <div class="div-mask"></div>
+        <div class="div-modal-ingredients">
+          <div class="modal-ingredients">
+            <img onclick="closeModalIngredients()" class="times" src="./resources/times.svg" alt="CERRAR" />
+
+            <p class="title tt">
+              Ingredientes <br />
+              <span id="typePizza" class="type-pizza color-orange">PEPERONI</span>
+            </p>
+
+            <div id="ingredientesd" class="div-ingredients">
+                <div class="div-ingredient">
+                    <div class="img-ing">
+                        <img src="./resources/ingredientes/quesoIng.svg" alt="INGREDIENTE">
+                    </div>
+                    <p class="text-type-ingr">Queso Mozzarela</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="central-difumination-icon">
+          <div class="div-img">
+            <img src="./resources/icon.webp" alt="VOY VOLANDO ICONO" />
+          </div>
+        </div>
+
+        <div class="div-buttons">
+          <a class="button" href="#menu">VER MENÚ</a>
+          <a class="button" href="#promos">VER PROMOCIONES</a>
+        </div>
+      </div>
+      <div class="div-products-all">
+        <div class="div-menu">
+          <div class="icon-menu">
+            <img
+              src="./resources/menu.svg"
+              onclick="showIndex(true)"
+              id="showMenu"
+              alt="MENU"
+            />
+            <img
+              src="./resources/times.svg"
+              onclick="showIndex(false)"
+              id="hideMenu"
+              alt="MENU"
+            />
+          </div>
+          <div class="menu-general">
+            <div class="triangulo"></div>
+            <p class="title">Indice</p>
+
+            <ul class="navbar">
+              <li onclick="navigated('#promos')">Promociones</li>
+              <li onclick="navigated('#menu')">Menú</li>
+              <hr class="hrcolor" />
+              <li onclick="navigated('#peperoni')">Peperoni</li>
+              <li onclick="navigated('#hawaiana')">Hawaiana</li>
+              <li onclick="navigated('#vegetariana')">Vegetariana</li>
+              <li onclick="navigated('#atun')">Atún</li>
+              <li onclick="navigated('#hawaianaespecial')">
+                Hawaiana especial
+              </li>
+              <li onclick="navigated('#napolitana')">Napolitana</li>
+              <li onclick="navigated('#choriqueso')">Choriqueso</li>
+              <li onclick="navigated('#toluqueña')">Toluqueña</li>
+              <li onclick="navigated('#americana')">Americana</li>
+              <li onclick="navigated('#tresquesos')">3 Quesos</li>
+              <li onclick="navigated('#suprema')">Suprema</li>
+              <li onclick="navigated('#italiana')">Italiana</li>
+            </ul>
+
+            <p class="textnormal">¡Calificanos!</p>
+            <p
+              onclick="locationHref('https://www.google.com.mx/maps/place/Voy+Volando/@18.9605344,-99.6429173,17z/data=!4m8!3m7!1s0x85cd9673502d6f01:0x82619004ba02cb73!8m2!3d18.9605344!4d-99.6403424!9m1!1b1!16s%2Fg%2F11b6q2wlv0?entry=ttu', true)"
+              class="textnormaldos"
+            >
+              Calificanos en Google
+            </p>
+          </div>
+        </div>
+        <div id="divOculto" class="div-icon-voy-volando">
+          <div onclick="locationHref('#promos', false)" class="div-img-header">
+            <img src="./resources/peperoniUp.webp" alt="UP" />
+          </div>
+        </div>
+
+        <h2 id="promos" class="promos color-blue-neon">
+          PROMOCION TODOS LOS DÍAS
+        </h2>
+
+        <div class="pizza">
+          <h3 class="color-orange">FAMILIAR 2 X 1</h3>
+          <h4>(Cualquier ingrediente)</h4>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/promoFamiliar.webp" alt="PIZZA" />
+          </div>
+          <p class="color-red-neon cost-promo">$290</p>
+        </div>
+
+        <div class="pizza">
+          <h3 class="color-orange">MEDIANAS 2 X 1</h3>
+          <h4>(Cualquier ingrediente)</h4>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/promoMedianas.webp" alt="PIZZA" />
+          </div>
+          <p class="color-red-neon cost-promo">$250</p>
+        </div>
+
+        <div class="pizza plast">
+          <h3 class="color-orange">MEGA / 30 REBANADAS</h3>
+          <h4>(Cualquier ingrediente)</h4>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/mega.webp" alt="PIZZA" />
+          </div>
+          <p class="color-red-neon cost-promo">$390</p>
+        </div>
+
+        <hr />
+
+        <h2 id="menu" class="h2-menu">MENÚ</h2>
+
+        <hr />
+
+        <h3>PRECIOS</h3>
+
+        <h4>(Cualquier ingrediente)</h4>
+
+        <div class="cost" id="cost">
+          <div>
+            <p class="color-blue-neon">Familiar</p>
+            <p class="color-red-neon">$170</p>
+          </div>
+          <div>
+            <p class="color-blue-neon">Mediana</p>
+            <p class="color-red-neon">$150</p>
+          </div>
+        </div>
+
+        <hr class="separation-line" />
+
+        <div class="pizza" id="peperoni">
+          <h3 class="color-orange">Peperoni</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaPeperoni.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Peperoni')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="hawaiana">
+          <h3 class="color-orange">Hawaiana</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaHawaiana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Hawaiana')"  class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="vegetariana">
+          <h3 class="color-orange">Vetegariana</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaVegetariana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Vegetariana')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="atun">
+          <h3 class="color-orange">AtÚn</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaAtun.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Atún')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="hawaianaespecial">
+          <h3 class="color-orange">Hawaiana especial</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaHawaiana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Hawaiana Especial')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="napolitana">
+          <h3 class="color-orange">Napolitana</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaNapolitana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Napolitana')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="choriqueso">
+          <h3 class="color-orange">Choriqueso</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaChoriqueso.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Choriqueso')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="toluqueña">
+          <h3 class="color-orange">Toluqueña</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaToluqueña.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Toluqueña')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="americana">
+          <h3 class="color-orange">Americana</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaAmericana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Americana')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="tresquesos">
+          <h3 class="color-orange">3 Quesos</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaTresQuesos.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('3 Quesos')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="suprema">
+          <h3 class="color-orange">Suprema</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaSuprema.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Suprema')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+        <div class="pizza" id="italiana">
+          <h3 class="color-orange">Italiana</h3>
+          <div class="img-pizza">
+            <img src="./resources/pizzas/pizzaItaliana.webp" alt="PIZZA" />
+          </div>
+          <div onclick="viewIngredients('Italiana')" class="button-show-ingredients">
+            <p>VER INGREDIENTES</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <h3 class="color-red-neon mediumn">
+          Tu opinión es muy importante para nosotros
+        </h3>
+
+        <p class="normal-text">Calificanos mediante el siguiente botón</p>
+
+        <div class="button-show-ingredients">
+          <p
+            onclick="locationHref('https://www.google.com.mx/maps/place/Voy+Volando/@18.9605344,-99.6429173,17z/data=!4m8!3m7!1s0x85cd9673502d6f01:0x82619004ba02cb73!8m2!3d18.9605344!4d-99.6403424!9m1!1b1!16s%2Fg%2F11b6q2wlv0?entry=ttu', true)"
+          >
+            CALIFICAR
+          </p>
+        </div>
+
+        <p class="normal-text ntd">
+          Seguiremos renovando tu pizzeria favorita con los mejores productos y
+          servicios para que tu experiencia sea inolvidable
+        </p>
+
+        <div class="div-img-pizza-emoji">
+          <img src="./resources/pizzerito.webp" alt="PIZZERITO" />
+        </div>
+
+        <footer>
+          <div class="div-img-voyvolando">
+            <img src="./resources/icon.webp" alt="VOY VOLANDO" />
+          </div>
+          <div class="columns-footer">
+            <div class="div-social-media">
+              <div class="social-media">
+                <div class="icono">
+                  <img
+                    src="./resources/icons/facebookIcon.svg"
+                    alt="FACEBOOK"
+                  />
+                </div>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100063797040256"
+                  >Visitanos en Facebook</a
+                >
+              </div>
+              <div class="social-media">
+                <div class="icono">
+                  <img src="./resources/icons/mapsIcon.svg" alt="MAPS" />
+                </div>
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/gp9CTwdEREtbEnEv8"
+                  >Héroes del 14 de Septiembre núm 25, Villa Guerrero, México</a
+                >
+              </div>
+              <div class="social-media">
+                <div class="icono">
+                  <img src="./resources/icons/mapsIcon.svg" alt="MAPS" />
+                </div>
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/3CERirch6VRL485t8"
+                  >Calle Matamoros #25, Villa Guerrero, México</a
+                >
+              </div>
+              <div class="social-media">
+                <div class="icono">
+                  <img src="./resources/icons/phoneIcon.svg" alt="PHONE" />
+                </div>
+                <a href="tel:7224283615">722 428 3615</a>
+              </div>
+              <div class="social-media">
+                <div class="icono">
+                  <img src="./resources/icons/emailIcon.svg" alt="MAIL" />
+                </div>
+                <a href="mailto:letizziachvz@gmail.com"
+                  >letizziachvz@gmail.com</a
+                >
+              </div>
+              <div class="social-media">
+                <div class="icono">
+                  <img src="./resources/icons/emailIcon.svg" alt="MAIL" />
+                </div>
+                <a href="mailto:voyvolandoofficialvilla@gmail.com"
+                  >voyvolandoofficialvilla@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="div-developer">
+              <div class="div-img-dev-icon">
+                <img src="./resources/icons/pdgnIcon.svg" alt="PDGN" />
+              </div>
+              <p class="normal-text">
+                PowerBy
+                <a
+                  target="_blank"
+                  href="https://danielnoveron.github.io/Daniel-Noveron-Pagina-Web/index.html"
+                  >PDGN</a
+                >
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
