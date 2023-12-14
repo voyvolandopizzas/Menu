@@ -559,7 +559,7 @@ a {
    
 }
 
-.navbar > li {
+.navbar > ul>  li {
     font-size: 20px !important;
     padding: 5px;
     border-radius: 5px;
@@ -568,10 +568,6 @@ a {
     z-index: 8;
 }
 
-.navbar > li:hover{
-    background-color: #d4d4d459;
-    text-decoration: none;
-}
 
 .hrcolor{
     border-color: black;
