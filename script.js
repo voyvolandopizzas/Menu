@@ -7,7 +7,7 @@ var indexShow = document.querySelector('.menu-general');
 
 var divOffsetTop = menu.offsetTop;
 var divOculto = document.getElementById("divOculto");
-document.addEventListener("DOMContentLoaded", function () {
+
   
 
   general.addEventListener("scroll", function () {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       divOculto.classList.remove("show-up");
     }
   });
-});
+
 function locationHref(site, openWindow) {
   if (openWindow) {
     window.open(site, "_blank");
