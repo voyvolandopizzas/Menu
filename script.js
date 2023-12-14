@@ -105,7 +105,7 @@ const pizzaVegetariana = {
 
 
 const pizzaAtun = {
-    "nombre":"Atún",
+    "nombre":"AtÚn",
     "ingredientes": [
         {
             "ingrediente":"Atún",
