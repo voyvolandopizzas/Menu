@@ -23,7 +23,7 @@ hr {
   border-radius: 3px;
 }
 body {
-  background-color: black;
+  background-color: black; 
   background-image: url(./resources/secondBack.webp);
   background-repeat: no-repeat;
   background-size: cover;
