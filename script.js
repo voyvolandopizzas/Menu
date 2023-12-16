@@ -9,7 +9,7 @@ var divOculto = document.getElementById("divOculto");
 
 console.log("Version 2.0");
 function mostrarConfirmacion() {
-  var respuesta = confirm("Pagina en mantenimiento");
+  var respuesta = confirm("Pagina aún en confirmación");
 
   if (respuesta) {
       // El usuario hizo clic en "Aceptar"
